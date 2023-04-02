@@ -1,26 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { ButtonProps } from "./IButton";
 
-import './Button.css';
-
-export type NormalButtonType =
-  | 'normal'
-  | 'green'
-  | 'purple'
-  | 'danger'
-  | 'info'
-  | 'success'
-  | 'error';
-
-export type NormalButtonSize = 'small' | 'medium' | 'large';
-
-export interface ButtonProps {
-  label: string;
-  style?: React.CSSProperties;
-  onClick?: () => React.MouseEvent<HTMLButtonElement>;
-  disabled?: boolean;
-  type?: NormalButtonType;
-  size?: NormalButtonSize;
-}
+import "./Button.css";
 
 const Button = (props: ButtonProps) => {
   const [hover, setHover] = useState(false);
@@ -31,52 +12,52 @@ const Button = (props: ButtonProps) => {
     onClick,
     disabled = false,
     type,
-    size = 'small',
+    size = "small",
   } = props;
 
   let buttonStyle = {};
 
   switch (type) {
-    case 'normal':
+    case "normal":
       buttonStyle = {
-        backgroundColor: hover ? '#877b87' : '',
-        color: hover ? '#fff' : '#000',
+        backgroundColor: hover ? "#877b87" : "",
+        color: hover ? "#fff" : "#000",
       };
       break;
-    case 'green':
+    case "green":
       buttonStyle = {
-        backgroundColor: hover ? '#2ea62e' : 'limegreen',
-        color: '#fff',
+        backgroundColor: hover ? "#2ea62e" : "limegreen",
+        color: "#fff",
       };
       break;
-    case 'purple':
+    case "purple":
       buttonStyle = {
-        backgroundColor: hover ? '#9c229c' : '#ba1eba',
-        color: '#fff',
+        backgroundColor: hover ? "#9c229c" : "#ba1eba",
+        color: "#fff",
       };
       break;
-    case 'danger':
+    case "danger":
       buttonStyle = {
-        backgroundColor: hover ? '#c9a734' : '#e8bb25',
-        color: '#fff',
+        backgroundColor: hover ? "#c9a734" : "#e8bb25",
+        color: "#fff",
       };
       break;
-    case 'info':
+    case "info":
       buttonStyle = {
-        backgroundColor: hover ? '#5680a8' : '#5a95cd',
-        color: '#fff',
+        backgroundColor: hover ? "#5680a8" : "#5a95cd",
+        color: "#fff",
       };
       break;
-    case 'success':
+    case "success":
       buttonStyle = {
-        backgroundColor: hover ? 'rgb(35 169 71)' : '#1bcc4a',
-        color: '#fff',
+        backgroundColor: hover ? "rgb(35 169 71)" : "#1bcc4a",
+        color: "#fff",
       };
       break;
-    case 'error':
+    case "error":
       buttonStyle = {
-        backgroundColor: hover ? '#bf2424' : 'red',
-        color: '#fff',
+        backgroundColor: hover ? "#bf2424" : "red",
+        color: "#fff",
       };
       break;
     default:
@@ -85,7 +66,7 @@ const Button = (props: ButtonProps) => {
 
   buttonStyle = {
     ...buttonStyle,
-    transition: 'background-color .3s ease, color .3s ease',
+    transition: "background-color .3s ease, color .3s ease",
   };
 
   const toggleHover = () => {
