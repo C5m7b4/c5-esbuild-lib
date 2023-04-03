@@ -8,3 +8,7 @@ https://www.youtube.com/watch?v=2VtEDCz0vzQ&t=10s
 https://medium.com/geekculture/build-a-library-with-esbuild-23235712f3c
 
 https://medium.com/tri-petch-digital/how-to-test-your-custom-react-library-locally-df02595e22f
+
+    // "^.+\\.(t|j)sx?$": "@swc/jest",
+
+    "^.+\\.(t|j)sx?$": "esbuild-jest"
