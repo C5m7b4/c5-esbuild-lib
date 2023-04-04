@@ -1,0 +1,20 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.js",
+    "server": "npx http-server"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "esbuild": "^0.17.15",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "c5-esbuild-lib": "file:../src"
+  }
+}
