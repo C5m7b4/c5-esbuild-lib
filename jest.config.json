@@ -20,6 +20,6 @@
   "transform": {
     "^.+\\.(t|j)sx?$": "@swc/jest"
   },
-  "testPathIgnorePatterns": ["transformers"],
+  "testPathIgnorePatterns": ["transformers, e2e"],
   "coveragePathIgnorePatterns": ["src/*/I[A-z]*.ts", "index.ts"]
 }
